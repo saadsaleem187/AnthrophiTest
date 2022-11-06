@@ -54,7 +54,6 @@ const Medications = () => {
               paddingRight: 15,
             }}
           />
-
           <Text style={styles.checkboxText}>
             No, I don’t take any medications
           </Text>
@@ -126,21 +125,21 @@ const Medications = () => {
                 {flexDirection: 'row', alignItems: 'center'},
               ]}>
               <Text style={{width: '92%', color: '#222222'}}>Select date</Text>
-              <DatePicker
-                modal
-                open={open}
-                date={date}
-                onConfirm={date => {
-                  setOpen(false);
-                  setDate(date);
-                }}
-                onCancel={() => {
-                  setOpen(false);
-                }}
-                locale="eng"
-              />
               <Image source={ArrowDown} />
             </TouchableOpacity>
+            <DatePicker
+              modal
+              open={open}
+              date={date}
+              onConfirm={date => {
+                setOpen(false);
+                setDate(date);
+              }}
+              onCancel={() => {
+                setOpen(false);
+              }}
+              locale="en"
+            />
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.label}>Additional Information</Text>
               <View style={styles.labelRow}>
